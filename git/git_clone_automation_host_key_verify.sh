@@ -8,7 +8,6 @@
 # https://git-scm.com/docs/git
 #
 #===============================================================================
-
 GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git clone git@bitbucket.org:account/repo.git
 #
 # Also useful: Use su to run as a different user
