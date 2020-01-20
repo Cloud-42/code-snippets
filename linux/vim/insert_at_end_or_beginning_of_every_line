@@ -1,0 +1,12 @@
+# 
+# Visual Mode:
+# Insert * at the end of each line
+#  
+:%s/$/\*/g 
+ 
+ 
+# 
+# Visual Mode: 
+# Insert // at the beginning of each line
+# 
+:%s!^!//!
