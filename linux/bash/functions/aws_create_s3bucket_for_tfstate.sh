@@ -13,7 +13,7 @@ if [ $? -ne 0 ]; then
 else
    aws s3api create-bucket --bucket $bucket_name --region $aws_region --create-bucket-configuration LocationConstraint=$aws_region
    aws s3api put-bucket-versioning --bucket $bucket_name --versioning-configuration Status=Enabled
-   aws s3api put-public-access-block --bucket $bucket_name --public-access-block-configuration IgnorePublicAcls=true
+   aws s3api put-public-access-block --bucket $bucket_name --public-access-block-configuration BlockPublicAcls=true,IgnorePublicAcls=true,BlockPublicPolicy=true,RestrictPublicBuckets=true
 fi
 }
 
