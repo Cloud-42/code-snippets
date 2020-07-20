@@ -23,3 +23,9 @@ Plug 'junegunn/vim-easy-align'
 Plug 'vim-scripts/bash-support.vim'
 "
 call plug#end()
+
+
+
+run vi and then :PlugInstall - installs plugins
+
+
