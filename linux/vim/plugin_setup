@@ -7,8 +7,10 @@ https://github.com/junegunn/vim-plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-Add a vim-plug section to your ~/.vimrc  - Have to create this file
-
+#
+# Add a vim-plug section to your ~/.vimrc, as below:
+# Create ~/.vimrc is if does not exist yet. 
+#
 
 " Basic vim settings
 set paste
