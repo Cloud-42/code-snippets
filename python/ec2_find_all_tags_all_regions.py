@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 import boto3
 
 regions=['us-east-2','us-east-1','ap-south-1','eu-west-1','eu-west-2']
@@ -9,7 +9,9 @@ def main():
     response  = ec2client.describe_instances()
     for reservation in response["Reservations"]:
       for instance in reservation["Instances"]:
-        print(instance["Tags"])
+        tags = instance["Tags"]
+        for item in tags:
+          print(item)
 
 
 if __name__=="__main__":
