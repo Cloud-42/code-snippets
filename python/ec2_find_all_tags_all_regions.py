@@ -1,5 +1,5 @@
+#!/usr/bin/env python
 import boto3
-import json
 
 regions=['us-east-2','us-east-1','ap-south-1','eu-west-1','eu-west-2']
 
