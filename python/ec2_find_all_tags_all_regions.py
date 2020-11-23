@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 import boto3
 
-regions=['us-east-2','us-east-1','ap-south-1','eu-west-1','eu-west-2']
+regions=['us-east-2','us-east-1','ap-south-1','eu-west-2','eu-west-1']
+
+keys = []
 
 def main():
   for region in regions:
-    keys = []
     ec2client = boto3.client('ec2',region_name=region)
     response  = ec2client.describe_instances()
     for reservation in response["Reservations"]:
