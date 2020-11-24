@@ -3,12 +3,12 @@ import boto3
 
 regions=['us-east-2','us-east-1','ap-south-1','eu-west-2','eu-west-1']
 
-instance_ids_list = []
+instance_ids_dict = {}
 
 def main():
   instances = instance_ids()
-  for instance in instances:
-    print(instance)
+  for key,value in instances.items():
+    print('Found instance', key, 'in region', value)
 
 def instance_ids():
     for region in regions:
@@ -16,11 +16,9 @@ def instance_ids():
       response  = ec2client.describe_instances()
       for reservation in response["Reservations"]:
         for instance in reservation["Instances"]:
-          instance_ids_list.append(instance['InstanceId'])
-    return instance_ids_list
+          instance_ids_dict[instance['InstanceId']] = region
+    #print (instance_ids_dict)
+    return dict(instance_ids_dict)
 
 if __name__=="__main__":
   main()
-
-
-
