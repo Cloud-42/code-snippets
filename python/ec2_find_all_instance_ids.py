@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 import boto3
 
 regions=['us-east-2','us-east-1','ap-south-1','eu-west-2','eu-west-1']
@@ -17,7 +17,6 @@ def instance_ids():
       for reservation in response["Reservations"]:
         for instance in reservation["Instances"]:
           instance_ids_dict[instance['InstanceId']] = region
-    #print (instance_ids_dict)
     return dict(instance_ids_dict)
 
 if __name__=="__main__":
