@@ -14,7 +14,8 @@ def main():
     volume_id_list=[]
     for item in instance.volumes.all():
       volume_id_list.append(item.id)
-      print('Found instance', key, 'in region', value, 'which has these volumes attached', volume_id_list)
+
+    print('Found instance', key, 'in region', value, 'which has these volumes attached', volume_id_list)
 
 def instance_ids():
     for region in regions:
