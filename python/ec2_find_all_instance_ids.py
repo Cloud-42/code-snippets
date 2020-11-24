@@ -8,7 +8,13 @@ instance_ids_dict = {}
 def main():
   instances = instance_ids()
   for key,value in instances.items():
-    print('Found instance', key, 'in region', value)
+    ec2resource = boto3.resource('ec2', region_name=value,)
+    instance = ec2resource.Instance(key)
+    vols = instance.volumes.all()
+    volume_id_list=[]
+    for item in instance.volumes.all():
+      volume_id_list.append(item.id)
+      print('Found instance', key, 'in region', value, 'which has these volumes attached', volume_id_list)
 
 def instance_ids():
     for region in regions:
@@ -21,3 +27,5 @@ def instance_ids():
 
 if __name__=="__main__":
   main()
+
+
