@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 import boto3
 
-
 def s3_delete_all(**kwargs):
     s3 = boto3.resource('s3')
     bucket = s3.Bucket(**kwargs)
@@ -17,3 +16,5 @@ def main():
 
 if __name__=="__main__":
    main()
+
+# Enter the name using format "BUCKET_NAME"
