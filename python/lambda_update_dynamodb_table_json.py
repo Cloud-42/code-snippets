@@ -16,4 +16,3 @@ def lambda_handler(event, context):
     table.put_item(Item = datadict)
   except Exception as e:
     print(str(e))
-
