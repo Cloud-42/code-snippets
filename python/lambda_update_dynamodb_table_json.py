@@ -13,6 +13,7 @@ def lambda_handler(event, context):
     print(datadict)
     database = boto3.resource('dynamodb', region_name=region)
     table = database.Table(table_name)
-    table.put_item(Item = datadict)
+    response = table.put_item(Item = datadict)
+    return response['ResponseMetadata']['HTTPStatusCode'] 
   except Exception as e:
     print(str(e))
