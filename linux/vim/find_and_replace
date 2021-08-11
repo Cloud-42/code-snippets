@@ -1,0 +1,4 @@
+# Replace stg with prd across the whole document.
+# % as a range. This character indicates a range from the first to the last line of the file.
+
+:%s/stg/prd/g
