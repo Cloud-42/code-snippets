@@ -18,3 +18,4 @@ if __name__=="__main__":
    main()
 
 # Enter the name using format "BUCKET_NAME"
+# Has to be a string in ""
