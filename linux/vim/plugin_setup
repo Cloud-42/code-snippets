@@ -29,4 +29,5 @@ call plug#end()
 #
 # Install plugins 
 # run vi and then :PlugInstall
+# if needed install vim , usually sudo yum install vim
 #
