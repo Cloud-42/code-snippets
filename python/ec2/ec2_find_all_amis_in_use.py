@@ -12,7 +12,11 @@ def main():
     for reservation in response["Reservations"]:
       for instance in reservation["Instances"]:
         mylist.append(instance["ImageId"])
-  print ("The list is: " + str(mylist))
+  result = []
+  for i in mylist:
+    if i not in result:
+        result.append(i)
+  print ("The list after removing duplicates : " + str(result))
 
 if __name__=="__main__":
   main()
