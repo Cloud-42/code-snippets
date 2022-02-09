@@ -23,6 +23,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'https://github.com/m-kat/aws-vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'vim-scripts/bash-support.vim'
+Plug 'hashivim/vim-terraform'
 "
 call plug#end()
 
