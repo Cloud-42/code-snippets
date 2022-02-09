@@ -31,3 +31,4 @@ call plug#end()
 # run vi and then :PlugInstall
 # if needed install vim , usually sudo yum install vim
 #
+# FIX certy warning if needed : export GIT_SSL_NO_VERIFY=true 
