@@ -13,7 +13,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 #
 
 " Basic vim settings
-set paste
+:set paste
 
 call plug#begin('~/.vim/plugged')
 "
