@@ -1,0 +1,2 @@
+# PEM format ssh key
+ssh-keygen -t rsa -m PEM -b 4096
