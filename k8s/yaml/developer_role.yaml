@@ -1,0 +1,42 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: developer
+subjects:
+- kind: Group
+  name: developer
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: ClusterRole
+  name: developer
+  apiGroup: rbac.authorization.k8s.io
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  annotations:
+  name: developer
+rules:
+rules:
+- apiGroups:
+  - ""
+  resources: ["*"]
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - extensions
+  resources: ["*"]
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - apps
+  resources: ["*"]
+  verbs:
+  - get
+  - list
+  - watch
