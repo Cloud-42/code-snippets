@@ -20,10 +20,11 @@ call plug#begin('~/.vim/plugged')
 " Plugins begin
 "
 Plug 'terryma/vim-multiple-cursors'
-Plug 'https://github.com/m-kat/aws-vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'vim-scripts/bash-support.vim'
 Plug 'hashivim/vim-terraform'
+Plug 'tomasiser/vim-code-dark'
+Plug 'tpope/vim-sensible'
 "
 call plug#end()
 
@@ -32,4 +33,4 @@ call plug#end()
 # run vi and then :PlugInstall
 # if needed install vim , usually sudo yum install vim
 #
-# FIX certy warning if needed : export GIT_SSL_NO_VERIFY=true 
+# FIX cert warning if needed : export GIT_SSL_NO_VERIFY=true 
