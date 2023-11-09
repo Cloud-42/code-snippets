@@ -6,3 +6,8 @@ git checkout TARGET BRANCH
 git cherry-pick COMMIT ID
 git checkout -b feat/new_branch
 git push origin feat/new_branch
+
+# OR 
+git cherry-pick COMMIT ID
+git push TARGET BRANCH
+# To push straight to the branch
