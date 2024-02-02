@@ -5,7 +5,7 @@ logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
 def lambda_handler(event, context):
-  print('Loading function..........')
+  logger.info("Loading function..........")
 
   bucket = os.environ['bucket']
   prefix = os.environ['prefix']
