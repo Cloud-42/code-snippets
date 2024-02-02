@@ -15,7 +15,6 @@ def lambda_handler(event, context):
 
   try:
     latest_file = get_latest_file_name(bucket_name=bucket,prefix=prefix)
-    source = "s3://" + bucket + "/" + latest_file
     
     logger.info("Found latest file to be " "s3://" + bucket + "/" + latest_file)
         
